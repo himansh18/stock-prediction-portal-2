@@ -1,8 +1,12 @@
 import React from 'react'
+import {Link} from 'react-router-dom'
 
-export const Button = ({ text, variant = 'outline-info' }) => {
+const Button = (props) => {
   return (
-    <a className={`btn btn-${variant}`} href='#'>{text}</a>
+    // we are usinng 
+    <Link className={`btn ${props.class}`} to={props.url}>
+      {props.text}
+    </Link>
   )
 }
 export default Button
