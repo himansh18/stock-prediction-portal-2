@@ -19,9 +19,13 @@ export const Header = () => {
         <Link className = 'navbar-brand text-light' to='/'>Stock Prediction</Link>
         <div>
           {isLoggedIn ? (
-            <button className = 'btn btn-danger' onClick={handleLogout}>
-              logout
-            </button>
+            <>
+            <Button text='Dashboard' class='btn-info' url="/dashboard"/>
+            &nbsp;
+            <Button className='btn btn-danger' onClick={handleLogout}>
+              Logout
+            </Button>
+            </>
           ): (
             <>
             <Button text='Login' class='btn-outline-info' url="/login"/>
